@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>D3 starter template</title>
+  <meta name="description" content="D3 starter template">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="index.css">
+</head>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<body>
+  <div id="my_dataviz">
+  </div>
+  <div id="slider_bar">
+  </div>
+<div id="vis">
+  <button id="play-button">Play</button>
+</div>
+<div id="legend">
+</div>
+<script>
+var svg = d3.select("#legend")
+    .append("svg")
+    .attr("width", 400)
+    .attr("height", 500)
+
+svg.append("circle").attr("cx",20).attr("cy",125).attr("r", 10).style("fill", "#ffa600")
+svg.append("circle").attr("cx",20).attr("cy",45).attr("r", 10).style("fill", "#dd5182")
+svg.append("text").attr("x", 35).attr("y", 130).text("visualization").style("font-size", "20px").attr("alignment-baseline","right")
+svg.append("text").attr("x", 35).attr("y", 50).text("dataisbeautiful").style("font-size", "20px").attr("alignment-baseline","middle")
+
+svg.append("circle").attr("cx",20).attr("cy",90).attr("r", 10).style("fill", "#bc5090")
+svg.append("text").attr("x", 35).attr("y", 90).text("dataisugly").style("font-size", "20px").attr("alignment-baseline","middle")
+
+svg.append("circle").attr("cx",30).attr("cy",210).attr("r", 7).style("fill", "#fff").style("stroke", "#000").style("stroke-width", "1");
+svg.append("circle").attr("cx",30).attr("cy",245).attr("r", 20).style("fill", "#fff").style("opacity", 0.8).style("stroke", "#000").style("stroke-width", "1")
+svg.append("circle").attr("cx",30).attr("cy",300).attr("r", 30).style("fill", "#fff").style("opacity", 0.8).style("stroke", "#000").style("stroke-width", "1")
+svg.append("text").attr("x", 60).attr("y", 245).text("size increases with avg_upvote").style("font-size", "20px").attr("alignment-baseline","middle")
+
+
+</script>
+<script src="index.js"></script>
+</body>
